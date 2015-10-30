@@ -7,10 +7,10 @@ var from = a[rA] + b[rB];
 var mt = 0
 var lh = 0
 var pubnub = PUBNUB({
-        subscribe_key: 'sub-c-39b40aba-7c99-11e5-a4dc-0619f8945a4f'
+        subscribe_key: 'sub-c-####################################' // Your subscriber key
 });
 function submitfunction() {
-    var message = {"UUID":from,"time":new Date().getTime(),"img":'images/userim.png',"msg":$('#m').val()};
+    var message = {"UUID":from,"time":new Date().getTime(),"msg":$('#m').val()};
     var chroom = $('#chroom').val();
     socket.emit('chatMessage', chroom, from, message);
     $('#m').val('');
@@ -41,15 +41,15 @@ function relative_time(date_str) {
     return 'about ' + r;
 };
 
-// socket.on('chatMessage', function(from, msg) {
-//     //last_msg_funtion(mt, 0);
-// });
+socket.on('chatMessage', function(from, msg) {
+    //last_msg_funtion(mt, 0);
+});
 
 function shownew(){
     window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
 }
 function history_receive(text, lh) {
-    bh = bh + '<div class="eachmsg"><div class="imgt"><img src="'+text["img"]+'" /></div><div class="name">'+text["UUID"]+' <span class=" chattinggreendot"></span> <span class="chatingboxdateny"><i>'+relative_time(text["time"])+'</i></span></div><div class="msgtext">' + text["msg"] + '</div></div>';
+    bh = bh + '<div class="eachmsg"><div class="name">'+text["UUID"]+' <span class=" chattinggreendot"></span> <span class="chatingboxdateny"><i>'+relative_time(text["time"])+'</i></span></div><div class="msgtext">' + text["msg"] + '</div></div>';
     shownew();
 }
 function history_write(text, lh) {
@@ -57,7 +57,7 @@ function history_write(text, lh) {
     bh='';
 }
 function chat_receive(text, lh) {
-    $('#box').append('<div class="eachmsg"><div class="imgt"><img src="'+text["img"]+'" /></div><div class="name">'+text["UUID"]+' <span class=" chattinggreendot"></span> <span class="chatingboxdateny"><i>'+relative_time(text["time"])+'</i></span></div><div class="msgtext">' +  ('' + text["msg"]).replace(/[<>]/g, '') + '</div></div>');
+    $('#box').append('<div class="eachmsg"><div class="name">'+text["UUID"]+' <span class=" chattinggreendot"></span> <span class="chatingboxdateny"><i>'+relative_time(text["time"])+'</i></span></div><div class="msgtext">' +  ('' + text["msg"]).replace(/[<>]/g, '') + '</div></div>');
 }
 $(document).ready(function() {
     var chroom = $('#chroom').val();
