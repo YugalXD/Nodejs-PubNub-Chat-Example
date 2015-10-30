@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-family: 'Open Sans', sans-serif;}
+div{box-sizing:border-box;}
+.allmsg{display: block;padding: 15px 20px 0px 20px;/*height: 560px;*/overflow-y: auto;float: left;width: 100%;margin-bottom:50px;}
+.xinp{position:fixed;bottom:0px;right:0px;left:0px;background:#fff;padding:15px 20px 15px 20px;}
+.xinp input{display: block;width: 100%;padding: 6px 12px;font-size: 14px;color: #555;background: #fff;border: 1px solid #ccc;
+border-radius: 0px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+-webkit-transition: border-color ease-in-out .10s; -webkit-box-shadow ease-in-out .10s;
+-o-transition: border-color ease-in-out .10s, box-shadow ease-in-out .10s;
+transition: border-color ease-in-out .15s, box-shadow ease-in-out .10s;}
+.xinp input:focus{border-color: #66afe9;outline: 0;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);}
+.imgt{margin: 0px;padding: 0px;float: left;width: 36px;border-radius: 50%;margin-right: 20px;height:36px;}
+.imgt img{width: 36px;border-radius: 50%;height:36px;}
+.name{display:block;overflow:hidden;color: #555459;font-size: 14px;font-weight: bold;font-family: arial;padding: 0px 0px 0px 0px;}
+.msgtext{color: #797c7f;font-size: 13px;padding-left:55px;}
+.eachmsg{padding: 0px 0px 20px 0px;}
+.chattinggreendot {background: #07c893;border-radius: 50%;width: 10px;display: inline-block;height: 10px;}
+.chatingboxdateny {text-align: right;color: #A3A3A3;font-size: 12px;font-weight:normal;}
+.chatingboxdateny i {font-style: normal;padding-left: 10px;float: right;display: inline-block;}
+@media(max-width:1200px){}
+@media(max-width: 992px){}
+@media(max-width: 767px){}
+@media(max-width: 550px){}
+@media(max-width: 450px){
+.allmsg{text-align:center;margin-bottom:70px;}
+.imgt {text-align: center;float: none;margin: 0px auto;}
+.name{overflow: visible;text-align: center;clear: both;padding-top: 8px;}
+.msgtext{padding-left:0px;}
+.allmsg{display: block;padding: 15px 20px 50px 20px;height: 560px;overflow-y: auto;float: left;width: 100%;}
+.chatingboxdateny {display: block;clear: both;float: left;width: 100%;text-align: center;}
+.chatingboxdateny i {float: none;}
+}
+

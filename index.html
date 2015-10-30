@@ -1,0 +1,17 @@
+<!doctype html>
+  <html>
+   <head>
+    <title>PubNub Node.js Chat Application</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="css/chatcss.css" rel="stylesheet" type="text/css">
+      <script src="https://cdn.pubnub.com/pubnub-3.7.15.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.7/socket.io.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src="chat.js"></script>
+  </head> 
+  <body>
+    <div class="allmsg" id="box"></div>
+    <input type="hidden" id="chroom" value="channel">
+    <input id="m" autocomplete="off"  placeholder="Type yor message here.." /><input type="submit" onclick="return submitfunction();" id="button" value="Send"/>
+  </body>
+</html>
