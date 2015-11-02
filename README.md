@@ -7,6 +7,7 @@ Intsall Pubnub with npm:
 <code>npm install pubnub</code>
 
 Add your publish and Subscriber Key in index.js file 
+
 <code>
 var pubnub = require("pubnub")({
     publish_key   : "pub-c-####################################", // Your Publish Key
