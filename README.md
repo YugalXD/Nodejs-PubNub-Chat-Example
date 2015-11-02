@@ -2,9 +2,16 @@
 An working example of group chat in nodejs, Pubnub
 
 PubNub for JS Docs have been moved to: http://www.pubnub.com/docs/javascript/javascript-sdk.html
-PubNub Node.js Quick Usage
 
-Open ./tests/unit-test.js to see examples for all the basics, plus history(), presence() and here_now()! Report an issue, or email us at support if there are any additional questions or comments.
-NPM Install
-
+Intsall Pubnub with npm:
 <code>npm install pubnub</code>
+
+Add your publish and Subscriber Key in index.js file 
+<code>
+var pubnub = require("pubnub")({
+    publish_key   : "pub-c-####################################", // Your Publish Key
+    subscribe_key : "sub-c-####################################"  // Your Subscriber Key
+});
+</code>
+
+Add Subsrciber key in chat.js
